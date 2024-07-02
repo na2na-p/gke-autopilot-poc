@@ -9,6 +9,7 @@ resource "google_container_cluster" "autopilot_cluster" {
   cost_management_config {
     enabled = true
   }
+  deletion_protection = false # HACK: 検証用
   initial_node_count = 1 # autopilotはリージョンクラスターなので必須
 }
 
